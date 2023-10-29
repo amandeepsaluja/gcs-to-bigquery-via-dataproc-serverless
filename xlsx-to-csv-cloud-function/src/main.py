@@ -20,7 +20,7 @@ def convert_excel_to_csv(request):
     ):
         source_excel_bucket = request_json["source_excel_bucket"]
         source_excel_file = request_json["source_excel_file"]
-        source_sheet_name = request_json.get("source_sheet_name", "0")
+        source_sheet_name = request_json.get("source_sheet_name", 0)
         target_csv_bucket = request_json["target_csv_bucket"]
         target_csv_file = request_json["target_csv_file"]
     else:
