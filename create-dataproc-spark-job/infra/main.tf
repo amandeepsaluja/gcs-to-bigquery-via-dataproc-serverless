@@ -22,6 +22,9 @@ resource "google_cloudfunctions2_function" "this" {
   build_config {
     runtime     = var.runtime
     entry_point = var.entry_point
+    environment_variables = {
+      SERVICE_ACCOUNT_EMAIL = var.service_account_email
+    }
 
     source {
       storage_source {
