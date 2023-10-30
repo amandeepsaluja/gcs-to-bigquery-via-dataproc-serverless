@@ -16,3 +16,7 @@ As documentation mentions, this template only supports avro, parquet, csv, or js
 - Terraform
   - https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/dataproc_job
   - https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/cloudfunctions2_function
+- GitHub
+  - https://github.com/GoogleCloudPlatform/dataproc-templates/tree/main/java/src/main/java/com/google/cloud/dataproc/templates/gcs#1-gcs-to-bigquery
+  - https://github.com/GoogleCloudPlatform/dataproc-templates/tree/main/python
+  - https://github.com/GoogleCloudPlatform/dataproc-templates/blob/main/notebooks/README.md
