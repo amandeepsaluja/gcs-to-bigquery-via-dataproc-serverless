@@ -28,7 +28,7 @@ def create_dataproc_spark_job(cloudevent):
     target_csv_file = excel_source.rsplit(".", maxsplit=1)[0] + ".csv"
 
     # triggering excel to csv cloud function
-    function_url = config_data["excel_to_csv_function_url"]
+    function_url = config_data["EXCEL_TO_CSV_CLOUD_FUNCTION"]
     function_headers = {"Content-Type": "application/json"}
     function_data = {
         "source_excel_bucket": source_excel_bucket,
