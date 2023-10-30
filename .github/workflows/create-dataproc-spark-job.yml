@@ -1,4 +1,4 @@
-name: Deploy XLSX to CSV Cloud Function
+name: Create DataProc Spark Job Cloud Function
 
 on: workflow_dispatch
 
