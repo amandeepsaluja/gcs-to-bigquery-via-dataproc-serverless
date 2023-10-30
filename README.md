@@ -7,8 +7,12 @@ As documentation mentions, this template only supports avro, parquet, csv, or js
 ## Reference
 
 - Google Cloud Platform
-  - https://cloud.google.com/dataproc-serverless/docs/templates/storage-to-bigquery
-  - https://cloud.google.com/functions/docs/writing/write-http-functions
+  - Dataproc
+    - https://cloud.google.com/dataproc-serverless/docs/templates/storage-to-bigquery
+    - https://cloud.google.com/dataproc-serverless/docs/overview
+    - https://cloud.google.com/dataproc-serverless/docs/reference/rest/v1/projects.locations.batches/create
+  - Cloud Functions
+    - https://cloud.google.com/functions/docs/writing/write-http-functions
 - Terraform
   - https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/dataproc_job
   - https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/cloudfunctions2_function
