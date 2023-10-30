@@ -1,4 +1,18 @@
+# General Config
 PROJECT_ID: "gcp-practice-project-aman"
+REGION: "us-central1"
+
+# BigQuery Config
 BQ_DATASET: "raw_layer"
 BQ_TABLE: "dataproc_test"
+
+# Cloud Function Config
 EXCEL_TO_CSV_CLOUD_FUNCTION: "https://us-central1-gcp-practice-project-aman.cloudfunctions.net/xlsx-to-csv"
+
+# Dataproc Config
+RUNTIME_VERSION: "1.1.37"
+SPARK_MAIN_CLASS: "com.google.cloud.dataproc.templates.main.DataProcTemplate"
+SPARK_TEMPLATE_NAME: "GCSTOBIGQUERY"
+SPARK_JAR_FILES:
+  - "file:///usr/lib/spark/external/spark-avro.jar"
+  - "gs://dataproc-templates-binaries/latest/java/dataproc-templates.jar"
