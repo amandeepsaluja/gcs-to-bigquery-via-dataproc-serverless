@@ -74,9 +74,9 @@ def create_dataproc_spark_job(cloudevent):
                 "runtimeConfig": {"version": config_data["RUNTIME_VERSION"]},
                 "environmentConfig": {
                     "executionConfig": {
-                        "serviceAccount": os.environ[
+                        "serviceAccount": os.environ.get(
                             "SERVICE_ACCOUNT_EMAIL"
-                        ],  # Github secret -> Terraform -> Cloud Function
+                        )  # GitHub secret -> Terraform -> Cloud Function
                     }
                 },
                 "sparkBatch": {
