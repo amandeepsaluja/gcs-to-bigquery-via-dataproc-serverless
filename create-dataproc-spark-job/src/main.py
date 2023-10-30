@@ -2,6 +2,7 @@ import functions_framework
 import google.oauth2.id_token
 import json
 import os
+import re
 import requests
 import yaml
 
@@ -69,7 +70,7 @@ def create_dataproc_spark_job(cloudevent):
         .batches()
         .create(
             parent=f"projects/{config_data['PROJECT_ID']}/locations/{config_data['REGION']}",
-            batchId=file_name,
+            batchId=f"{re.sub(r'[^a-zA-Z0-9]+', '-', file_name)}-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
             body={
                 "runtimeConfig": {"version": config_data["RUNTIME_VERSION"]},
                 "environmentConfig": {
