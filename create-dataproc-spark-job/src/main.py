@@ -58,9 +58,9 @@ def create_dataproc_spark_job(cloudevent):
         audience, headers=function_headers, data=json.dumps(function_data)
     )
 
-    print("Waiting for 30 seconds for the excel to csv cloud function to complete")
+    print("Waiting for 15 seconds for the excel to csv cloud function to complete")
 
-    sleep(30)
+    sleep(15)
 
     # creating dataproc spark job
     service = build("dataproc", "v1", cache_discovery=False)
@@ -70,7 +70,7 @@ def create_dataproc_spark_job(cloudevent):
         .batches()
         .create(
             parent=f"projects/{config_data['PROJECT_ID']}/locations/{config_data['REGION']}",
-            batchId=f"{re.sub(r'[^a-zA-Z0-9]+', '-', file_name)}-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
+            batchId=f"{re.sub(r'[^a-zA-Z0-9]+', '-', file_name)}-{datetime.now().strftime('%Y%m%d-%H%M%S')}",
             body={
                 "runtimeConfig": {"version": config_data["RUNTIME_VERSION"]},
                 "environmentConfig": {
