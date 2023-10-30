@@ -22,3 +22,4 @@ As documentation mentions, this template only supports avro, parquet, csv, or js
   - https://github.com/GoogleCloudPlatform/dataproc-templates/tree/main/java/src/main/java/com/google/cloud/dataproc/templates/gcs#1-gcs-to-bigquery
   - https://github.com/GoogleCloudPlatform/dataproc-templates/tree/main/python
   - https://github.com/GoogleCloudPlatform/dataproc-templates/blob/main/notebooks/README.md
+  - https://github.com/GoogleCloudPlatform/serverless-spark-workshop
