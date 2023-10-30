@@ -3,6 +3,7 @@ import functions_framework
 import pandas as pd
 
 from google.cloud import storage
+from helpers import clean_column_name
 from io import BytesIO
 
 
@@ -36,6 +37,9 @@ def convert_excel_to_csv(request):
 
     # Convert the Excel file to CSV
     df = pd.read_excel(BytesIO(blob_result), sheet_name=source_sheet_name)
+
+    # updating column names and converting to a dictionary
+    df.columns = [clean_column_name(col) for col in df.columns]
 
     # Convert the DataFrame to a CSV string
     csv_data = df.to_csv(index=False)
