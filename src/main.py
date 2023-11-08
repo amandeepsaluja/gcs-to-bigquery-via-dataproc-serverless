@@ -37,7 +37,11 @@ def create_dataproc_spark_job(cloudevent):
     source_excel_bucket = gcs_bucket_name
     source_excel_file = excel_source
     target_csv_bucket = gcs_bucket_name
-    target_csv_file = excel_source.rsplit(".", maxsplit=1)[0] + ".csv"
+    target_csv_file = excel_source.replace("raw-excel", "processed-csv").replace(
+        ".xlsx", ".csv"
+    )
+
+    dataproc_input_location = f"gs://{target_csv_bucket}/{target_csv_file}"
 
     # authenticating for cloud function call
     request = google_requests.Request()
@@ -89,7 +93,7 @@ def create_dataproc_spark_job(cloudevent):
                         "--templateProperty",
                         f"project.id={config_data['PROJECT_ID']}",
                         "--templateProperty",
-                        f"gcs.bigquery.input.location=f'gs://{target_csv_bucket}/{target_csv_file}'",
+                        f"gcs.bigquery.input.location={dataproc_input_location}'",
                         "--templateProperty",
                         "gcs.bigquery.input.format=csv",
                         "--templateProperty",
