@@ -61,7 +61,7 @@ variable "bucket_name" {
 
 variable "cf_trigger_bucket_path" {
   type    = string
-  default = "projects/_/buckets/dataproc-bucket-gcp-practice-project-aman/objects/data/*.xlsx"
+  default = "projects/_/buckets/data-bucket-gcp-practice-project-aman/objects/raw-excel/*.xlsx"
 }
 
 variable "service_account_email" {
