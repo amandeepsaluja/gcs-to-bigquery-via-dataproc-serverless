@@ -57,6 +57,7 @@ def create_dataproc_spark_job(cloudevent):
         "source_excel_file": source_excel_file,
         "target_csv_bucket": target_csv_bucket,
         "target_csv_file": target_csv_file,
+        "job_source": "DataProc Serverless",
     }
 
     response = requests.post(
