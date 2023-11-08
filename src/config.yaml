@@ -4,12 +4,12 @@ REGION: "us-central1"
 
 # BigQuery Config
 BQ_DATASET: "raw_layer"
-BQ_TABLE: "dataproc_test"
+BQ_TABLE: "xlxs_to_csv_pipeline"
 
 # Cloud Function Config
-EXCEL_TO_CSV_CLOUD_FUNCTION: "https://us-central1-gcp-practice-project-aman.cloudfunctions.net/xlsx-to-csv"
+EXCEL_TO_CSV_CLOUD_FUNCTION: "https://us-central1-gcp-practice-project-aman.cloudfunctions.net/xlsx-to-csv-function"
 
-# Dataproc Config
+# Dataproc Config (Do not update)
 RUNTIME_VERSION: "1.1.37"
 SPARK_MAIN_CLASS: "com.google.cloud.dataproc.templates.main.DataProcTemplate"
 SPARK_TEMPLATE_NAME: "GCSTOBIGQUERY"
