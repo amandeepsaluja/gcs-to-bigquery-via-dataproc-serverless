@@ -89,7 +89,7 @@ def create_dataproc_spark_job(cloudevent):
                         "--templateProperty",
                         f"project.id={config_data['PROJECT_ID']}",
                         "--templateProperty",
-                        f"gcs.bigquery.input.location={full_gcs_path}",
+                        f"gcs.bigquery.input.location=f'gs://{target_csv_bucket}/{target_csv_file}'",
                         "--templateProperty",
                         "gcs.bigquery.input.format=csv",
                         "--templateProperty",
