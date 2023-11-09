@@ -83,7 +83,8 @@ def create_dataproc_spark_job(cloudevent):
                     "executionConfig": {
                         "serviceAccount": os.environ.get(
                             "SERVICE_ACCOUNT_EMAIL"
-                        )  # GitHub secret -> Terraform -> Cloud Function
+                        ),  # GitHub secret -> Terraform -> Cloud Function
+                        "stagingBucket": config_data["STAGING_BUCKET"],
                     }
                 },
                 "sparkBatch": {

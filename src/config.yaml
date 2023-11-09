@@ -9,6 +9,9 @@ BQ_TABLE: "xlxs_to_csv_pipeline"
 # Cloud Function Config
 EXCEL_TO_CSV_CLOUD_FUNCTION: "https://us-central1-gcp-practice-project-aman.cloudfunctions.net/xlsx-to-csv-function"
 
+# Cloud Storage Config
+STAGING_BUCKET: "dataproc-bucket-gcp-practice-project-aman"
+
 # Dataproc Config (Do not update)
 RUNTIME_VERSION: "1.1.37"
 SPARK_MAIN_CLASS: "com.google.cloud.dataproc.templates.main.DataProcTemplate"
